@@ -1,0 +1,83 @@
+@import url(https://fonts.googleapis.com/css?family=Kalam:400,700,300&subset=devanagari,latin);
+
+  body{
+    background: #222;
+    font-family: 'Kalam', cursive;
+    /*color: #901db3
+  ;*/
+  }
+
+  *, *:before, *:after{
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    font-family: 'Kalam', cursive;
+  }
+
+  .cols,
+  .cols li{
+    list-style: none;
+    list-style-type: none;
+  }
+
+  .cols li span{
+    display: inline-block;
+    width: -webkit-calc(100%/6);
+    width: calc(96.5%/6);
+    float: left;
+    background: #901db3
+  ;
+    text-align: center;
+    height: 220px;
+    line-height: 220px;
+    margin-left:.5%; 
+    margin-top:.5%; 
+    color: #333;
+    font-size: 10em;
+    font-weight: 900;
+    position: relative;
+
+    -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-perspective: 550px;
+  -ms-perspective: 550px;
+  perspective: 550px;
+  transition: all .5s;
+  }
+
+  .cols li span:after,
+  .cols li span:before{
+    content: attr(data-number);
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 3;
+    color: #901db3
+  ;
+    text-shadow: 1px 1px #222;
+    transition: all .5s;
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+
+  .cols li span:after{
+    z-index: 4;
+  }
+
+  .cols li span:hover::before{
+    -webkit-transform: scale(0.85,1) skew(0deg,40deg);
+    transform: scale(0.85,1) skew(0deg,20deg);
+    color: rgba(234,102,84,0.5);
+    text-shadow: .5px .5px #222;
+    opacity: 0.1;
+  }
+
+  .cols li span:hover::after{
+    transform: translateX(10px) rotateY(-40deg);
+    text-shadow: .5px .5px #222;
+    color: #ff8270;
+  }
+
